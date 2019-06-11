@@ -112,9 +112,8 @@ class BookList extends Component {
   };
 
   filterBooksHandler = e => {
-    const currentBooks = [...this.state.books];
-
-    const filtered = currentBooks.filter(book =>
+    const { books } = this.state;
+    const filtered = books.filter(book =>
       book.title.toLowerCase().includes(e.target.value.toLowerCase())
     );
 
@@ -132,6 +131,16 @@ class BookList extends Component {
     const sorted = currentBooks.sort((a, b) => a.title.localeCompare(b.title));
 
     this.setState({ books: sorted });
+  };
+
+  addToCartHandle = id => {
+    const currentBooks = [...this.state.books];
+
+    const booksAfterAddingAnyToCart = currentBooks.map(book =>
+      book.isbn === id ? { ...book, isAddedToCart: true } : book
+    );
+
+    this.setState({ books: booksAfterAddingAnyToCart });
   };
 
   // rethink
@@ -161,6 +170,8 @@ class BookList extends Component {
                   isbn={book.isbn}
                   pages={book.pages}
                   key={book.isbn}
+                  addToCart={this.addToCartHandle}
+                  isAddedToCart={book.isAddedToCart}
                 />
               ))
             : filteredBooks.map(book => (
@@ -169,6 +180,7 @@ class BookList extends Component {
                   isbn={book.isbn}
                   pages={book.pages}
                   key={book.isbn}
+                  addToCart={this.addToCartHandle}
                 />
               ))}
         </ul>
