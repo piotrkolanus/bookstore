@@ -125,6 +125,15 @@ class BookList extends Component {
     this.setState({ filteredBooks: filtered, isFilterActive });
   };
 
+  sortByTitle = () => {
+    const currentBooks = [...this.state.books];
+    console.log('currentBooks: ', currentBooks);
+
+    const sorted = currentBooks.sort((a, b) => a.title.localeCompare(b.title));
+
+    this.setState({ books: sorted });
+  };
+
   // rethink
   // showNotFoundMsg = () => {
   //   const { filteredBooks, isFilterActive } = this.state;
@@ -141,6 +150,9 @@ class BookList extends Component {
     return (
       <>
         <input onChange={this.filterBooksHandler} />
+        <button type="button" onClick={this.sortByTitle}>
+          Sort by title
+        </button>
         <ul>
           {!isFilterActive
             ? books.map(book => (
