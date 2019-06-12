@@ -1,0 +1,4 @@
+module.exports = [
+  ['use-babel-config', '.babel.json'],
+  ['use-tslint-config', 'tslint.json'],
+]

@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "mobx": "^5.10.1",
+    "mobx-react": "^6.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "rescripts build",
+    "start": "rescripts start",
+    "test": "rescripts test",
+    "eject": "rescripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +33,8 @@
     ]
   },
   "devDependencies": {
+    "@rescripts/cli": "^0.0.10",
+    "@rescripts/rescript-env": "^0.0.10",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",
@@ -37,5 +43,8 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
     "prettier": "^1.18.2"
-  }
+  },
+  "rescripts": [
+    "env"
+  ]
 }
