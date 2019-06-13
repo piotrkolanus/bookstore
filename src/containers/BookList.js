@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
+
+import ListGroup from 'react-bootstrap/ListGroup';
 import Book from '../components/Book';
 import bookStore from '../stores/BookStore';
 
@@ -45,7 +47,7 @@ class BookList extends Component {
         <button type="button" onClick={this.sortByTitle}>
           Sort by title
         </button>
-        <ul>
+        <ListGroup>
           {!isFilterActive
             ? books.map(book => (
                 <Book
@@ -66,7 +68,7 @@ class BookList extends Component {
                   addToCart={this.addToCartHandle}
                 />
               ))}
-        </ul>
+        </ListGroup>
       </>
     );
   }

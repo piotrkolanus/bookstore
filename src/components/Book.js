@@ -1,4 +1,5 @@
 import React from 'react';
+import ListGroupItem from 'react-bootstrap/ListGroupItem';
 
 const Book = ({ title, isbn, pages, addToCart, isAddedToCart }) => {
   const handleClick = () => {
@@ -6,12 +7,12 @@ const Book = ({ title, isbn, pages, addToCart, isAddedToCart }) => {
     console.log(isbn);
   };
   return (
-    <li key={isbn}>
+    <ListGroupItem key={isbn}>
       {title} {pages} {isAddedToCart}
       <button onClick={handleClick} type="button">
         Buy
       </button>
-    </li>
+    </ListGroupItem>
   );
 };
 
