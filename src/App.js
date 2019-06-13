@@ -1,8 +1,12 @@
 import React from 'react';
 import BookList from './containers/BookList';
+import Header from './components/Header'
 
 const App = () => {
-  return <BookList />;
+  return (<>
+    <Header />
+    <BookList />
+  </>);
 };
 
 export default App;

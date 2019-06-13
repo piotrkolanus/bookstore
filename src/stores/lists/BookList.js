@@ -97,6 +97,90 @@ export const BookList = [
     description:
       'Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft’s ASP.NET Web API framework. In the process, you’ll learn how design and implement a real-world Web API.',
     website: 'http://chimera.labs.oreilly.com/books/1234000001708/index.html'
+  },
+  {
+    isbn: '9781593275847',
+    title: 'Eloquent JavaScript, Second Edition',
+    subtitle: 'A Modern Introduction to Programming',
+    author: 'Marijn Haverbeke',
+    published: '2014-12-14T00:00:00.000Z',
+    publisher: 'No Starch Press',
+    pages: 472,
+    description:
+      'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
+    website: 'http://eloquentjavascript.net/'
+  },
+  {
+    isbn: '9781593275849',
+    title: 'Eloquent JavaScript, Second Edition',
+    subtitle: 'A Modern Introduction to Programming',
+    author: 'Marijn Haverbeke',
+    published: '2014-12-14T00:00:00.000Z',
+    publisher: 'No Starch Press',
+    pages: 472,
+    description:
+      'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
+    website: 'http://eloquentjavascript.net/'
+  },
+  {
+    isbn: '9781593275845',
+    title: 'Eloquent JavaScript, Second Edition',
+    subtitle: 'A Modern Introduction to Programming',
+    author: 'Marijn Haverbeke',
+    published: '2014-12-14T00:00:00.000Z',
+    publisher: 'No Starch Press',
+    pages: 472,
+    description:
+      'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
+    website: 'http://eloquentjavascript.net/'
+  },
+  {
+    isbn: '9781593275844',
+    title: 'Eloquent JavaScript, Second Edition',
+    subtitle: 'A Modern Introduction to Programming',
+    author: 'Marijn Haverbeke',
+    published: '2014-12-14T00:00:00.000Z',
+    publisher: 'No Starch Press',
+    pages: 472,
+    description:
+      'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
+    website: 'http://eloquentjavascript.net/'
+  },
+  {
+    isbn: '9781593275843',
+    title: 'Eloquent JavaScript, Second Edition',
+    subtitle: 'A Modern Introduction to Programming',
+    author: 'Marijn Haverbeke',
+    published: '2014-12-14T00:00:00.000Z',
+    publisher: 'No Starch Press',
+    pages: 472,
+    description:
+      'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
+    website: 'http://eloquentjavascript.net/'
+  },
+  {
+    isbn: '9781593275842',
+    title: 'Eloquent JavaScript, Second Edition',
+    subtitle: 'A Modern Introduction to Programming',
+    author: 'Marijn Haverbeke',
+    published: '2014-12-14T00:00:00.000Z',
+    publisher: 'No Starch Press',
+    pages: 472,
+    description:
+      'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
+    website: 'http://eloquentjavascript.net/'
+  },
+  {
+    isbn: '9781593275841',
+    title: 'Eloquent JavaScript, Second Edition',
+    subtitle: 'A Modern Introduction to Programming',
+    author: 'Marijn Haverbeke',
+    published: '2014-12-14T00:00:00.000Z',
+    publisher: 'No Starch Press',
+    pages: 472,
+    description:
+      'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
+    website: 'http://eloquentjavascript.net/'
   }
 ];
 
