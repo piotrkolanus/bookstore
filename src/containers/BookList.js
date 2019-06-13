@@ -1,62 +1,30 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import Book from '../components/Book';
+import bookStore from '../stores/BookStore';
 
 @inject('BookStore')
 @observer
 class BookList extends Component {
-  state = {
-    filteredBooks: [],
-    isFilterActive: false,
-    books: [
-      {
-        isbn: '9781593275846',
-        title: 'Eloquent JavaScript, Second Edition',
-        subtitle: 'A Modern Introduction to Programming',
-        author: 'Marijn Haverbeke',
-        published: '2014-12-14T00:00:00.000Z',
-        publisher: 'No Starch Press',
-        pages: 472,
-        description:
-          'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
-        website: 'http://eloquentjavascript.net/'
-      }
-    ]
-  };
-
   filterBooksHandler = e => {
-    const { books } = this.state;
-    const filtered = books.filter(book =>
-      book.title.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-
-    let isFilterActive = true;
-    if (e.target.value === 0) {
-      isFilterActive = false;
-    }
-    this.setState({ filteredBooks: filtered, isFilterActive });
+    bookStore.filterBooks(e.target.value);
   };
 
   sortByTitle = () => {
-    const { books } = this.state;
-    const currentBooks = [...books];
-    console.log('currentBooks: ', currentBooks);
-
-    const sorted = currentBooks.sort((a, b) => a.title.localeCompare(b.title));
-
-    this.setState({ books: sorted });
+    bookStore.sortByTitle();
   };
 
-  addToCartHandle = id => {
-    const { books } = this.state;
-    const currentBooks = [...books];
+  // add another store for that
+  // addToCartHandle = id => {
+  //   const { books } = this.state;
+  //   const currentBooks = [...books];
 
-    const booksAfterAddingAnyToCart = currentBooks.map(book =>
-      book.isbn === id ? { ...book, isAddedToCart: true } : book
-    );
+  //   const booksAfterAddingAnyToCart = currentBooks.map(book =>
+  //     book.isbn === id ? { ...book, isAddedToCart: true } : book
+  //   );
 
-    this.setState({ books: booksAfterAddingAnyToCart });
-  };
+  //   this.setState({ books: booksAfterAddingAnyToCart });
+  // };
 
   // rethink
   // showNotFoundMsg = () => {
@@ -70,7 +38,7 @@ class BookList extends Component {
   // };
 
   render() {
-    const { books, isFilterActive, filteredBooks } = this.state;
+    const { books, isFilterActive, filteredBooks } = bookStore;
     return (
       <>
         <input onChange={this.filterBooksHandler} />
