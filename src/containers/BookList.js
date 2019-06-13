@@ -8,10 +8,6 @@ import bookStore from '../stores/BookStore';
 @inject('BookStore')
 @observer
 class BookList extends Component {
-  filterBooksHandler = e => {
-    bookStore.filterBooks(e.target.value);
-  };
-
   sortByTitle = () => {
     bookStore.sortByTitle();
   };
@@ -43,7 +39,6 @@ class BookList extends Component {
     const { books, isFilterActive, filteredBooks } = bookStore;
     return (
       <>
-        <input onChange={this.filterBooksHandler} />
         <button type="button" onClick={this.sortByTitle}>
           Sort by title
         </button>
