@@ -12,11 +12,12 @@ class Header extends Component {
 
   render() {
     return (
-      <Navbar className="bg-light justify-content-between">
-        {/* expand="lg"
+      <Navbar
+        className="bg-light justify-content-around"
+        expand="lg"
         sticky="top"
-        bg="light" */}
-
+        bg="light"
+      >
         <Navbar.Brand href="#home">Bookstore</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Form inline>
