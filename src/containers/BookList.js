@@ -6,22 +6,31 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Book from '../components/Book';
-import bookStore from '../stores/BookStore';
+// import bookStore from '../stores/BookStore';
 import cartStore from '../stores/CartStore';
 
+@inject('BookStore')
 @observer
 class BookList extends Component {
   sortByTitle = () => {
-    bookStore.sortByTitle();
+    const {
+      BookStore: { books }
+    } = this.props;
+    books.sortByTitle();
   };
 
   addToCartHandle = id => {
-    const boughtProduct = bookStore.books.find(book => book.isbn === id);
+    const {
+      BookStore: { books }
+    } = this.props;
+    const boughtProduct = books.find(book => book.isbn === id);
     cartStore.addToCart(boughtProduct);
   };
 
   render() {
-    const { books, isFilterActive, filteredBooks } = bookStore;
+    const {
+      BookStore: { books, isFilterActive, filteredBooks }
+    } = this.props;
     return (
       <Container>
         <Row>

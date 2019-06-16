@@ -4,9 +4,9 @@ import { BookList } from './lists/BookList';
 class BookStore {
   @observable books = BookList;
 
-  @observable filteredBooks= [];
+  @observable filteredBooks = [];
 
-  @observable isFilterActive= false;
+  @observable isFilterActive = false;
 
   @action filterBooks = value => {
     const filtered = this.books.filter(book =>
@@ -27,7 +27,7 @@ class BookStore {
     const sorted = currentBooks.sort((a, b) => a.title.localeCompare(b.title));
 
     this.books.replace(sorted);
-  }
+  };
 }
 
 export default new BookStore();
